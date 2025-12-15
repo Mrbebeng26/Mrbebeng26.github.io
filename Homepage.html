@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>Homepage</title>
+  <style>
+    /* Your page background */
+    body {
+        margin: 0;
+        font-family: system-ui, Segoe UI, Arial, sans-serif;
+		color: white; /* Ensures non-neon text is visible on the dark background */
+    }
+
+    /* Center the heading with CSS (recommended over align="center") */
+    h1 {
+      text-align: center;
+      margin: 0px 10px;
+		font-size: 250%;
+    }
+
+	  h2 {
+		  /* FIX: Corrected syntax from 'text-align= "justify"' to 'text-align: justify;' */
+		  text-align: center; 
+		  margin: 50px; /* Adjusted margin for better centering and spacing */
+	  }
+	  
+	  .menu{
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+		margin: 20px 0;
+		background-color: rgba(63, 81, 181, 0.9);
+		border-radius: 10px; 
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+		overflow: hidden; 
+	}
+		
+	.menu li{
+		flex-grow: 1;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		cursor: pointer;
+		transition: background-color 0.4s ease, transform 0.2s ease;
+		border-right: 1px solid rgba(255, 255, 255, 0.2); 
+	}
+		
+	.menu li:last-child {
+		border-right: none;
+	}
+		
+	.menu li a{
+		display: block; 
+		padding: 15px 20px;
+		text-decoration: none;
+		color: #ffffff;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 14px;
+	}
+
+	.menu li:hover{
+		background-color: #ff9800;
+		transform: translateY(-2px);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+		z-index: 10;
+	}
+	
+	.menu li:hover a{
+		color: #1a237e;
+	}
+
+	.menu li a.active {
+		background-color: #ff9800;
+		color: #1a237e;
+	}
+
+	  
+	  	.container {
+        width: 90%; 
+        max-width: 1080px; 
+        margin: 40px auto;
+		margin-top: 200px;
+        background-color: #1F1F1F;
+        border-radius: 10px;
+        padding: 80px;
+			padding-bottom: 100px;
+        font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif" 
+	  }
+	  
+	  .content-img {
+		  align:center; 
+		  margin: 20px auto;
+		  padding: 20px auto;
+	  }
+  </style>
+</head>
+
+<body>
+	<div class="container">
+		
+	<ul class="menu">
+		<li><a href="Homepage.html" class="active">🏠 Homepage</a></li>
+		<li><a href="MyBiodata.html">👤 My Biodata</a></li>
+		<li><a href="MyPortfolio.html">💼 My Portfolio</a></li>
+		<li><a href="MyVideo.html">🎬 My Video</a></li>
+		<li><a href="YourComment.html">💬 Your Comments</a></li>
+	</ul>
+		
+<h1 class=" neon-base neon-flicker">Hello My Friends!</h1>
+		
+	<h2>My name is Mohammad Ilman Bin Musri. You guys can call me Ilman. I'm currently continuing my study at Universiti Malaysia Sabah Labuan International College. The course that I've been taking is Bachelor Degree of Multimedia Technology. Now, I'm currently at my 3rd year. Nice to meet you guys. Have a nice day today.</h2>
+		
+		<img align="center" src="pmfki-makan2.jpg" alt="PMFKI Makan-Makan" class="content-img">
+		
+</body>
+</html>

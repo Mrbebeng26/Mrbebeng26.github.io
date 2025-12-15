@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>My Portfolio</title>    
+    <style>
+        /* BASE STYLES */
+        body {
+            /* Changed black to #121212 for a better dark theme match */
+            background-color: #121212; 
+            color: #E0E0E0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+		
+		.menu{
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+		margin: 20px 0;
+		background-color: rgba(63, 81, 181, 0.9);
+		border-radius: 10px; 
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+		overflow: hidden; 
+	}
+		
+	.menu li{
+		flex-grow: 1;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		cursor: pointer;
+		transition: background-color 0.4s ease, transform 0.2s ease;
+		border-right: 1px solid rgba(255, 255, 255, 0.2); 
+	}
+		
+	.menu li:last-child {
+		border-right: none;
+	}
+		
+	.menu li a{
+		display: block; 
+		padding: 15px 20px;
+		text-decoration: none;
+		color: #ffffff;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 14px;
+	}
+
+	.menu li:hover{
+		background-color: #ff9800;
+		transform: translateY(-2px);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+		z-index: 10;
+	}
+	
+	.menu li:hover a{
+		color: #1a237e;
+	}
+
+	.menu li a.active {
+		background-color: #ff9800;
+		color: #1a237e;
+	}
+
+		
+
+        /* CONTAINER */
+        .container {
+            width: 85%; 
+            max-width: 1200px;
+            /* Changed margin top from 60px to 40px to give space for the menu inside */
+            margin: 40px auto; 
+            background-color: #1F1F1F;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            /* Removed flex properties here as the menu will be the first child */
+            /* We will apply flex to a new inner wrapper for the main content (images and text) */
+            display: block; /* Reset display to default block for the container */
+        }
+        
+        /* NEW: Wrapper to hold the images and text, applying the original flex layout */
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* Add some top margin to separate it from the menu bar */
+            margin-top: 30px; 
+        }
+
+        /* *** NEW: IMAGE STACK WRAPPER *** */
+        .image-stack {
+            display: flex;
+            flex-direction: column; /* This is the key: forces items to stack vertically */
+            gap: 20px; /* Adds 20px spacing between each image */
+        }
+
+        /* IMAGE STYLES */
+        .content-img {
+            max-width: 250px; /* Adjusted size slightly to accommodate the stack */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+        }
+
+        /* TEXT SECTION STYLES */
+        .portfolio-section {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 40px; 
+            /* min-height property removed as the height is now determined by the image stack */
+        }
+
+        h1 {
+            color:; 
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-align: left;
+        }
+
+        h2 {
+            color: #C8E6C9; /* Lighter accent color */
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        p {
+            color: #E0E0E0; 
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="menu">
+		<li><a href="Homepage.html">🏠 Homepage</a></li>
+		<li><a href="MyBiodata.html">👤 My Biodata</a></li>
+		<li><a href="MyPortfolio.html" class="active">💼 My Portfolio</a></li>
+		<li><a href="MyVideo.html">🎬 My Video</a></li>
+		<li><a href="YourComment.html">💬 Your Comments</a></li>
+	    </ul>
+        <div class="content-wrapper">
+            <div class="image-stack">
+                <img src="Artifact.PNG" alt="Portfolio Image 1" class="content-img">
+                
+                <img src="website-design.png" alt="Portfolio Image 2" class="content-img">
+                
+                <img src="AR.png" alt="Portfolio Image 3" class="content-img">
+            </div>
+
+            <div class="portfolio-section">
+                <h1 class="neon-base neon-flicker">My Portfolio</h1>
+                
+                <p>Welcome to my portfolio! As a 3rd-year Multimedia Technology student, I focus on studying Animation, Augmented Reality, and more about multimedia.</p>
+
+                <h2><b>Key Skills</b></h2>
+                <p><b>Programming Languages:</b> Python, Java, JavaScript, C++</p>
+                <p><b>Web Technologies:</b> HTML, CSS, React, Node.js</p>
+                <p><b>Databases:</b> SQL, MongoDB</p>
+                
+                <h2>Featured Project</h2>
+                <p><b>Production of Augmented Reality:</b> Making a video based on traditional story from our own place with many key features like interactivity with the model. </p>
+                <p><b>Website Maker:</b> Making an interesting website that consist of interactive keyfeatures with animation.</p>
+                
+            </div>
+        </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>My Video</title>
+    
+    <style>
+        /* BASE STYLES - Consistent with Biodata/Portfolio */
+        body {
+            background-color: #121212; /* Dark background */
+            color: #E0E0E0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+		
+		.menu{
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+		margin: 20px 0;
+		background-color: rgba(63, 81, 181, 0.9);
+		border-radius: 10px; 
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+		overflow: hidden; 
+	}
+		
+	.menu li{
+		flex-grow: 1;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		cursor: pointer;
+		transition: background-color 0.4s ease, transform 0.2s ease;
+		border-right: 1px solid rgba(255, 255, 255, 0.2); 
+	}
+		
+	.menu li:last-child {
+		border-right: none;
+	}
+		
+	.menu li a{
+		display: block; 
+		padding: 15px 20px;
+		text-decoration: none;
+		color: #ffffff;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 14px;
+	}
+
+	.menu li:hover{
+		background-color: #ff9800;
+		transform: translateY(-2px);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+		z-index: 10;
+	}
+	
+	.menu li:hover a{
+		color: #1a237e;
+	}
+
+	.menu li a.active {
+		background-color: #ff9800;
+		color: #1a237e;
+	}
+
+
+        /* CONTAINER - The main card area */
+        .container {
+            width: 85%; 
+            max-width: 1200px;
+            margin: 60px auto;
+            background-color: #1F1F1F;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            
+            /* FLEXBOX SETUP: Center the content (video and text) */
+            display: flex;
+            flex-direction: column; /* Stack header, text, and video vertically */
+            align-items: center; /* Center everything horizontally */
+            text-align: center;
+        }
+        
+        /* HEADER STYLE */
+        h1 {
+            color:; /* Accent color: Green (same as Biodata) */
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        /* TEXT/DESCRIPTION STYLE */
+        p {
+            color: #E0E0E0; 
+            font-size: 1.3em;
+			font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+            margin-bottom: 30px;
+            max-width: 800px; /* Constrain text width for readability */
+        }
+        
+        /* *** NEW: VIDEO EMBED STYLES (iframe) *** */
+        .video-wrapper {
+            /* Create an aspect ratio box for responsive video */
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio (9/16 * 100) */
+            max-width: 900px; /* Max size for the video player */
+            margin-bottom: 20px;
+        }
+
+        .video-wrapper iframe,
+		.video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px; /* Soft corners for the video frame */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+	<div class="container">
+		
+		<ul class="menu">
+		<li><a href="Homepage.html">🏠 Homepage</a></li>
+		<li><a href="MyBiodata.html">👤 My Biodata</a></li>
+		<li><a href="MyPortfolio.html">💼 My Portfolio</a></li>
+		<li><a href="MyVideo.html" class="active">🎬 My Video</a></li>
+		<li><a href="YourComment.html">💬 Your Comments</a></li>
+	</ul>
+        
+        <h1 class="neon-base neon-flicker">My Animation Video</h1>
+        
+      <p>This section showcases one of my video productions. This video is an animation of car selection. All the model in the video was build by me and my friends.</p>
+
+        <div class="video-wrapper">
+			<video controls poster="thumbnail.png">
+                <source src="Midnight-Edge-Car-Selection-Menu.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+	</div>
+</body>
+</html>

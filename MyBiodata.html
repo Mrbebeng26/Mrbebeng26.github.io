@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>My Biodata</title>
+    
+    <style>
+        body {
+            background-color: #121212; 
+            color: #E0E0E0; 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+		
+		/* --- MENU STYLES (Kept as is) --- */
+		.menu{
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+		margin: 20px 0;
+		background-color: rgba(63, 81, 181, 0.9);
+		border-radius: 10px; 
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+		overflow: hidden; 
+	}
+		
+	.menu li{
+		flex-grow: 1;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		cursor: pointer;
+		transition: background-color 0.4s ease, transform 0.2s ease;
+		border-right: 1px solid rgba(255, 255, 255, 0.2); 
+	}
+		
+	.menu li:last-child {
+		border-right: none;
+	}
+		
+	.menu li a{
+		display: block; 
+		padding: 15px 20px;
+		text-decoration: none;
+		color: #ffffff;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 14px;
+	}
+
+	.menu li:hover{
+		background-color: #ff9800;
+		transform: translateY(-2px);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+		z-index: 10;
+	}
+	
+	.menu li:hover a{
+		color: #1a237e;
+	}
+
+	.menu li a.active {
+		background-color: #ff9800;
+		color: #1a237e;
+	}
+    /* --- END MENU STYLES --- */
+
+
+        .container {
+            width: 85%; 
+            max-width: 1200px; 
+            margin: 40px auto; /* Adjusted margin-top for consistency */
+            background-color: #1F1F1F; 
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+            /* Removed display: flex, justify-content, and align-items here */
+            display: block; 
+        }
+
+        /* NEW: Wrapper for the main content to apply the flex layout */
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 30px; /* Space between menu and content */
+        }
+
+
+        h1 {
+            color:; 
+            text-align: left; 
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            width: 100%; 
+			font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"
+        }
+        
+        .bio-text {
+            flex: 1; 
+            padding-right: 60px;
+        }
+
+        p {
+            color: #E9DCC9; 
+            font-size: 1.3em;
+            margin-bottom: 15px;
+			font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"
+        }
+
+    
+        .content-img {
+            max-width: 500px; 
+            height: auto;
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            object-fit: cover; 
+            margin-top: 100px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+		
+		<ul class="menu">
+		<li><a href="Homepage.html">🏠 Homepage</a></li>
+		<li><a href="MyBiodata.html" class="active">👤 My Biodata</a></li>
+		<li><a href="MyPortfolio.html">💼 My Portfolio</a></li>
+		<li><a href="MyVideo.html">🎬 My Video</a></li>
+		<li><a href="YourComment.html">💬 Your Comments</a></li>
+	    </ul>
+        
+        <div class="content-wrapper">
+		
+            <div class="bio-section">
+                <h1 class="full-width" class="neon-base neon-flicker">My Biodata</h1>
+                
+                <div class="bio-text">
+                    <p><b>Name:</b> Mohammad Ilman Bin Musri</p>
+                    <p><b>Age:</b> 22 Years Old</p>
+                    <p><b>Status:</b> 3rd Year Student</p>
+                    <p><b>Course:</b> Technology Multimedia</p>
+                    <p><b>Interests:</b> Programming, Gaming, Photography</p>
+                    <p><b>Study Journey:</b></p>
+                    <p>1. SK Sagindai&nbsp; <img src="sk-sagindai.jpg" alt="SK Sagindai" width="50" height="50"></p>
+                    <p>2. SMK Matupang Jaya&nbsp; <img src="Smk-matupang.jpeg" alt="SMK Matupang Jaya" width="50" height="50"></p>
+                    <p>3. Labuan Matriculation College &nbsp; <img src="labuan-matric.jpeg" alt="Labuan Matriculation College" width="50" height="50"></p>
+                    <p>4. Universiti Malaysia Sabah&nbsp; <img src="ums.png" alt="Universiti Malaysia Sabah" width="50" height="50"></p>
+                </div>
+            </div>
+            
+            <img src="solo-pic-fkal-night.jpg" alt="FKAL NIGHT" class="content-img">
+        </div>
+        </div>
+</body>
+</html>

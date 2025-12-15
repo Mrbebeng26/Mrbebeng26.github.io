@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>Mainpage</title>
+</head>
+	<style>	
+	body{
+		/* 2. Dark background for consistency */
+		background-color: #121212; 
+		color: #E0E0E0;
+		font-family: 'Montserrat', sans-serif; 
+		margin: 0; /* Changed from 40px to 0 to control outer spacing with margin on .container */
+	}
+		    /* Center the heading with CSS (recommended over align="center") */
+    h1 {
+      text-align: center;
+      margin: 0px 10px;
+		font-size: 250%;
+    }
+		
+		
+	.menu{
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+		margin: 20px 0;
+		background-color: rgba(63, 81, 181, 0.9);
+		border-radius: 10px; 
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+		overflow: hidden; 
+	}
+		
+	.menu li{
+		flex-grow: 1;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		cursor: pointer;
+		transition: background-color 0.4s ease, transform 0.2s ease;
+		border-right: 1px solid rgba(255, 255, 255, 0.2); 
+	}
+		
+	.menu li:last-child {
+		border-right: none;
+	}
+		
+	.menu li a{
+		display: block; 
+		padding: 15px 20px;
+		text-decoration: none;
+		color: #ffffff;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 14px;
+	}
+
+	.menu li:hover{
+		background-color: #ff9800;
+		transform: translateY(-2px);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+		z-index: 10;
+	}
+	
+	.menu li:hover a{
+		color: #1a237e;
+	}
+
+	.menu li a.active {
+		background-color: #ff9800;
+		color: #1a237e;
+	}
+		
+	/* *** CONFORMING CONTAINER STYLES *** */
+	.container {
+        width: 85%; /* Slightly narrower for better focus */
+        max-width: 1200px; /* Consistent max width */
+        margin: 60px auto; /* Consistent margin for vertical centering/spacing */
+		/* background-color: dimgray; <-- Removed old color */
+        background-color: #1F1F1F; /* 3. Dark gray card color (consistent) */
+        border-radius: 15px; /* 4. Soft corners (consistent) */
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* 5. Added shadow (consistent) */
+        
+        /* 6. Consistent Font, though body handles most of it, this is good practice */
+        font-family: 'Montserrat', sans-serif; 
+	}
+
+
+	</style>
+
+<body>
+<div class="container">
+	
+	<ul class="menu">
+		<li><a href="Homepage.html">🏠 Homepage</a></li>
+		<li><a href="MyBiodata.html">👤 My Biodata</a></li>
+		<li><a href="MyPortfolio.html">💼 My Portfolio</a></li>
+		<li><a href="MyVideo.html">🎬 My Video</a></li>
+		<li><a href="YourComment.html">💬 Your Comments</a></li>
+	</ul>
+
+	<h1 align="center" class="neon-base neon-flicker">Welcome to My Page!</h1>
+    </div>
+</body>
+</html>
