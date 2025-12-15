@@ -1,0 +1,414 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    color: #333;
+    line-height: 1.6;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+nav {
+    background: #555;
+    padding: 0.5rem;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav li {
+    margin: 0 1rem;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background 0.3s;
+}
+nav a:hover {
+    background: #777;
+}
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: slideUp 1s ease-out;
+}
+section {
+    margin-bottom: 2rem;
+}
+h1, h2 {
+    color: #4facfe;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+.skill-item {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+.skill-item:hover {
+    transform: scale(1.1);
+    background: #f0f8ff;
+}
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #4facfe;
+    animation: growLine 3s ease-in-out;
+}
+.timeline-item {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 4px solid #00f2fe;
+    animation: fadeInUp 1s ease-out;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+input, textarea, button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    background: #4facfe;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #00f2fe;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 0.5rem 0;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+@keyframes growLine {
+    from { height: 0; }
+    to { height: 100%; }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+// Simple form validation for comments page
+function validateForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return false;
+    }
+    alert('Thank you for your comment!');
+    return true;
+}
+// Add fade-in animation on load
+window.addEventListener('load', () => {
+    document.body.style.opacity = '1';
+});
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="biodata.html">My Biodata</a></li>
+            <li><a href="portfolio.html">My Portfolio</a></li>
+            <li><a href="video.html">My Video</a></li>
+            <li><a href="comments.html">Your Comments</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Hello! I'm [Your Name], a passionate student in web development. I love creating interactive websites and exploring new technologies. This site showcases my journey, skills, and projects.</p>
+            <img src="images/profile.jpg" alt="Profile Picture" style="width: 200px; float: right; margin-left: 1rem;">
+        </section>
+        <section id="timetable">
+            <h2>My Timetable</h2>
+            <div class="timeline">
+                <div class="timeline-item"><strong>8 AM - 10 AM:</strong> Classes</div>
+                <div class="timeline-item"><strong>10 AM - 12 PM:</strong> Study Time</div>
+                <div class="timeline-item"><strong>1 PM - 3 PM:</strong> Project Work</div>
+                <div class="timeline-item"><strong>4 PM - 6 PM:</strong> Hobbies (e.g., Coding)</div>
+            </div>
+        </section>
+        <section id="skills-interests">
+            <h2>Skills & Interests</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML & CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Photography</div>
+                <div class="skill-item">Gaming</div>
+            </div>
+        </section>
+    </main>
+    <footer>&copy; 2023 [Your Name]. All rights reserved.</footer>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Biodata</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Biodata</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="biodata.html">My Biodata</a></li>
+            <li><a href="portfolio.html">My Portfolio</a></li>
+            <li><a href="video.html">My Video</a></li>
+            <li><a href="comments.html">Your Comments</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Name: [Your Name]</p>
+            <p>Age: [Your Age]</p>
+            <p>Education: [Your Degree/Program]</p>
+            <p>Hobbies: Coding, reading, and traveling.</p>
+            <img src="images/profile.jpg" alt="Profile Picture">
+        </section>
+    </main>
+    <footer>&copy; 2023 [Your Name]. All rights reserved.</footer>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="biodata.html">My Biodata</a></li>
+            <li><a href="portfolio.html">My Portfolio</a></li>
+            <li><a href="video.html">My Video</a></li>
+            <li><a href="comments.html">Your Comments</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>My Projects</h2>
+            <div>
+                <h3>Project 1: Personal Website</h3>
+                <p>A responsive website built with HTML/CSS/JS.</p>
+                <img src="images/project1.jpg" alt="Project 1">
+            </div>
+            <div>
+                <h3>Project 2: Mobile App Prototype</h3>
+                <p>A simple app design using Figma.</p>
+                <img src="images/project2.jpg" alt="Project 2">
+            </div>
+        </section>
+    </main>
+    <footer>&copy; 2023 [Your Name]. All rights reserved.</footer>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Video</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Video</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="biodata.html">My Biodata</a></li>
+            <li><a href="portfolio.html">My Portfolio</a></li>
+            <li><a href="video.html">My Video</a></li>
+            <li><a href="comments.html">Your Comments</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Featured Video</h2>
+            <p>Check out this video about my coding journey!</p>
+            <video controls>
+                <source src="videos/myvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+    <footer>&copy; 2023 [Your Name]. All rights reserved.</footer>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Comments</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Your Comments</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="biodata.html">My Biodata</a></li>
+            <li><a href="portfolio.html">My Portfolio</a></li>
+            <li><a href="video.html">My Video</a></li>
+            <li><a href="comments.html">Your Comments</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Leave a Comment</h2>
+            <form onsubmit="return validateForm()">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>&copy; 2023 [Your Name]. All rights reserved.</footer>
+</body>
+</html>
+
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+	<style>
+		body {background-color: antiquewhite;}
+		h1 {class= "neon-base neon-flicker";}
+	</style>
+<meta charset="utf-8">
+<title>Homepage</title>
+</head>
+
+<body>
+	<h1 align="center">Welcome To My Personal Website</h1>
+</body>
+</html>
+
+
+
+
+
+
+
